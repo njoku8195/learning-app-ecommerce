@@ -92,6 +92,8 @@ sudo sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
 ```
 sudo service httpd start
 sudo systemctl enable httpd
+sudo systemctl status httpd
+# test the running webserver: curl http://localhost
 ```
 
 4. Download code
@@ -106,6 +108,7 @@ git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /var/www/ht
 Update [index.php](https://github.com/kodekloudhub/learning-app-ecommerce/blob/13b6e9ddc867eff30368c7e4f013164a85e2dccb/index.php#L107) file to connect to the right database server. In this case `localhost` since the database is on the same server.
 
 ```
+sudo vi /var/www/html/index.php or use sed as below
 sudo sed -i 's/172.20.1.101/localhost/g' /var/www/html/index.php
 
               <?php
