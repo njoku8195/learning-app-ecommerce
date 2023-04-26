@@ -30,6 +30,7 @@ sudo systemctl enable mariadb
 ```
 sudo firewall-cmd --permanent --zone=public --add-port=3306/tcp
 sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
 ```
 
 3. Configure Database
@@ -74,6 +75,7 @@ mysql < db-load-script.sql
 sudo yum install -y httpd php php-mysql
 sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
 sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
 ```
 
 2. Configure httpd
