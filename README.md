@@ -83,6 +83,7 @@ sudo firewall-cmd --list-all
 Change `DirectoryIndex index.html` to `DirectoryIndex index.php` to make the php page the default page
 
 ```
+# check the httpd.conf file sudo vi /etc/httpd/conf/httpd.conf
 sudo sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
 ```
 
